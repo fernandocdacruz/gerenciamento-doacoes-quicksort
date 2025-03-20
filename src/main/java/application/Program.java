@@ -3,6 +3,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import service.ExecutarOp;
 import utils.ObterMenuOp;
 
 public class Program {
@@ -14,6 +15,7 @@ public class Program {
 		int menuOp = 0;
 		do {
 			menuOp = ObterMenuOp.obterOp(scanner);
+			ExecutarOp.executar(scanner, menuOp);
 		} while (menuOp != 0);
 		System.out.println("Sistema encerrado, agradecemos a doação!");
 		scanner.close();
